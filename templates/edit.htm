@@ -1,0 +1,15 @@
+<!-- edit.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit Book</h1>
+
+<form method="POST">
+  <input value="{{book.name}}" type="text" name="name" placeholder="Book Name">
+  <input value="{{book.author}}" type="text" name="author" placeholder="Author">
+  <input value="{{book.price}}" type="number" step=".01" name="price" placeholder="Price">
+  <button type="submit">Save</button>
+</form>
+
+{% endblock %}
