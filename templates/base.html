@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-
-  <title>{% block title %}Library App{% endblock %}</title>
-
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+    <meta charset="UTF-8">
+    <title>Library Management System</title>
+    <!-- Add your CSS stylesheets and other meta tags here -->
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
 </head>
-
 <body>
-
-  <header>
-    <h1>Library App</h1>
+    <header>
+        <h1>Library Management System</h1>
+        <!-- Add your navigation menu or header content here -->
+    </header>
     <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/books">Books</a></li>
-        <li><a href="/authors">Authors</a></li>
-      </ul>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/book">Books</a></li>
+            <li><a href="/members">Members</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
     </nav>
-  </header>
-
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
-
+    <main>
+        <!-- Your content will go here -->
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <!-- Add footer content, copyright, and other information here -->
+        &copy; 2023 Bourntec_Library
+    </footer>
 </body>
 </html>

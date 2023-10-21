@@ -1,16 +1,15 @@
-<!-- index.html -->
-
 
 {% block content %}
+
 <h1>Library</h1>
 
 <table>
   <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Author</th>
-    <th>Price</th>
-    <th>Actions</th>
+    <th> ID </th>
+    <th> Name </th>
+    <th> Author </th>
+    <th> Price </th>
+    <th> Actions </th>
   </tr>
 
   {% for book in books %}
@@ -21,7 +20,10 @@
     <td>{{book.price}}</td>
     <td>
       <a href="/edit/{{book.id}}">Edit</a>
-      <a href="/delete/{{book.id}}">Delete</a>
+      <a href="{{ url_for('delete', book_id=book.id) }}" 
+           onclick="return confirm('Are you sure you want to delete?')">
+          Delete
+        </a>
     </td>
   </tr>
   {% endfor %}
