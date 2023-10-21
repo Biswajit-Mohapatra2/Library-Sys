@@ -1,12 +1,27 @@
+
+{% extends 'base.html' %}
+
 {% block content %}
+    <div class="container">
+        <h2 class="mt-5 mb-4">Add a Book</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="name">Book Name:</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter the book name" required>
+            </div>
 
-<h1>Add Book</h1>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" class="form-control" name="author" id="author" placeholder="Enter the author's name" required>
+            </div>
 
-<form method="POST">
-  <input type="text" name="name" placeholder="Book Name">
-  <input type="text" name="author" placeholder="Author">
-  <input type="number" step=".01" name="price" placeholder="Price">
-  <button type="submit">Submit</button> 
-</form>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" name="price" id="price" step="0.01" placeholder="Enter the book's price" required>
+            </div>
 
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <a href="/" class="btn btn-secondary mt-3">Back to Catalog</a>
+    </div>
 {% endblock %}
